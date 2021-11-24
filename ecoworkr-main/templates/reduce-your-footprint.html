@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %}ecoworkr{% endblock %}</h1>
+
+
+<header>
+    <ul>
+      
+      <li><a href="{{ url_for('home') }}" class="team-name">Home</a></li>
+      <li><a href="{{ url_for('reduce_your_footprint') }}">Reduce your digital footprint</a></li>
+      <li><a href="{{ url_for('about_the_project') }}">About</a></li>
+    </ul>
+  </header>
+
+ <h2>For remote workers and freelancers</h2>
+    <div class='half'>
+    <div class="gallery">
+      <a target="_blank" href="https://www.howtogeek.com/696774/how-to-turn-off-your-webcam-and-microphone-on-zoom/">
+        <img src="{{ url_for('static', filename='camera.png') }}" alt="Webcam" width="600" height="400">
+      </a>
+      <div class="desc"><p>Turn off your camera unless it adds value to your call</p></div>
+    </div>
+    
+    <div class="gallery">
+      <a target="_blank" href="https://uk.pcmag.com/how-to/91036/how-to-unsubscribe-from-unwanted-email">
+        <img src="{{ url_for('static', filename='email pic.jpeg') }}" alt="Email" width="600" height="400">
+      </a>
+      <div class="desc"><p>Unsubscribe from unwanted email subscriptions</p></div>
+    </div>
+    
+    <div class="gallery">
+      <a target="_blank" href="https://green.harvard.edu/tools-resources/green-tip/reduce-monitor-brightness-reduce-energy">
+        <img src="{{ url_for('static', filename='screen brightness pic.jpeg') }}" alt="Monitor brightness" width="600" height="400">
+      </a>
+      <div class="desc"><p>Lower your monitor brightness</p></div>
+    </div>
+    
+    <div class="gallery">
+      <a target="_blank" href="https://www.ecosia.org/">
+        <img src="{{ url_for('static', filename='ecosia.jpeg') }}" alt="Trees" width="600" height="400">
+      </a>
+      <div class="desc"><p>Switch to Ecosia and plant trees while you search the web</p></div>
+    </div>
+    </div>
+
+    <br>
+
+    <h2>For employers</h2>
+
+    
+    <div class='half'>
+
+    <div class="gallery">
+      <a target="_blank" href="https://uk.pcmag.com/cloud-services/9067/the-best-video-conferencing-software">
+        <img src="{{ url_for('static', filename='google-meet.png') }}" alt="Google Meet logo" width="600" height="400">
+      </a>
+      <div class="desc"><p>Choose a video conferencing provider for your company with 
+        a commitment to using 100% renewable energy (like Google Meet)</p></div>
+    </div>
+
+    <div class="gallery">
+      <a target="_blank" href="https://gizmodo.com/how-to-clear-out-space-in-all-your-cloud-storage-accoun-1844611066">
+        <img src="{{ url_for('static', filename='cloud-storage-pic.webp') }}" alt="Cloud storage" width="600" height="400">
+      </a>
+      <div class="desc"><p>Regularly clean out company cloud storage drives of unused
+                        files. As well as reducing carbon emissions from old files,
+                        it will lower cloud storage costs, and less clutter = 
+                        more efficient teams.</p>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <a target="_blank" href="https://ellenmacarthurfoundation.org/topics/circular-economy-introduction/overview">
+        <img src="{{ url_for('static', filename='circular-economy-unido-blog.jpeg') }}" alt="Circular economy" width="600" height="400">
+      </a>
+      <div class="desc"><p>Adopt a Lifecycle Management Process in your business and adhere to 
+                        circular economy principles</p>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <a target="_blank" href="https://projectbliss.net/meetings-that-could-have-been-an-email/">
+        <img src="{{ url_for('static', filename='work-from-home-featured-02.png') }}" alt="Work from home" width="600" height="400">
+      </a>
+      <div class="desc"><p>Save bigger meetings for days most people are in the office.
+                        Avoid scheduling unnecessary meetings for what could be a 
+                        succint email or message.</p>
+      </div>
+    </div>
+    </div>
+    <br>
+    <br>
+
+ <footer>
+    <div class="footer">
+        <div id="button"></div>
+      <div id="container">
+      <div id="cont">
+      <div class="footer_center">
+             <ul>
+
+              <li><a href="{{ url_for('about_the_project') }}">More info</a></li>
+              <li><a href="{{ url_for('reduce_your_footprint') }}">For employers</a></li>
+              <li><a href="{{ url_for('reduce_your_footprint') }}">For remote workers</a></li>
+              <li><a href="{{ url_for('about_the_project') }}">Contact us</a></li>
+                </ul>
+      </div>
+      </div>
+      </div>
+      </div>
+    </footer>
+{% endblock %}
